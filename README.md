@@ -17,27 +17,27 @@ This Java program simulates an Electric Vehicle (EV) Charging Station Finder and
 ### 1. ChargingStation Class
 
 The 'ChargingStation' class represents a charging station in the system. It contains the following attributes:
-- 'id': A unique identifier for the charging station.
-- 'location': The physical location of the charging station (e.g., Downtown, Uptown).
-- 'chargerType': The type of charger available at the station (e.g., Fast, Standard).
-- 'slots': A map representing the charging slots at the station. The key is the slot name (e.g., "slot1"), and the value is a boolean indicating availability ('true' means available, 'false' means booked).
+- id: A unique identifier for the charging station.
+- location: The physical location of the charging station (e.g., Downtown, Uptown).
+- chargerType: The type of charger available at the station (e.g., Fast, Standard).
+- slots: A map representing the charging slots at the station. The key is the slot name (e.g., "slot1"), and the value is a boolean indicating availability ('true' means available, 'false' means booked).
 
 ### 2. EVChargingSystem Class
 
 The 'EVChargingSystem' class is the core of the application, managing the list of charging stations and providing methods for searching and booking.
 
 #### Attributes:
-- 'chargingStations': A static list of 'ChargingStation' objects. This list is pre-populated with a few stations and their slot availability for demonstration purposes.
+- chargingStations: A static list of 'ChargingStation' objects. This list is pre-populated with a few stations and their slot availability for demonstration purposes.
 
 #### Methods:
 
-- 'getAvailableLocations()': 
+- getAvailableLocations(): 
   - This method returns a set of all unique locations where charging stations are available. It allows users to see all available locations before searching for a specific station.
 
-- 'findChargingStations(String location, String chargerType)':
+- findChargingStations(String location, String chargerType):
   - This method filters and returns a list of charging stations based on the specified location and charger type. If the location or charger type doesn't match any station, it returns an empty list.
 
-- 'bookSlot(int stationId, String slotName)':
+- bookSlot(int stationId, String slotName):
   - This method attempts to book a specified slot at a station identified by 'stationId'. If the slot is available, it marks the slot as booked ('false' in the slots map) and returns a success message. If the slot is already booked, it returns a message informing the user that they need to wait or choose another slot.
 
 #### Main Method:
